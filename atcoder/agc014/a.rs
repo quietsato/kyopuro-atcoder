@@ -19,14 +19,10 @@ fn main() {
         )
     };
 
-    match solve(a, b, c) {
-        Some(ans) => {
-            println!("{}", ans);
-        }
-        None => {
-            println!("-1");
-        }
-    }
+    println!(
+        "{}",
+        solve(a, b, c).map_or("-1".to_owned(), |ans| ans.to_string())
+    );
 }
 
 fn solve(a: u64, b: u64, c: u64) -> Option<usize> {
