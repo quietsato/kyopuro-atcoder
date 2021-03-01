@@ -1,2 +1,2 @@
 # kyopuro
-AtCoderとかPaizaとかのコード置き場
+AtCoderのコード置き場
