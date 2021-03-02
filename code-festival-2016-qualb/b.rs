@@ -16,20 +16,20 @@ fn main() {
         s: proconio::marker::Chars
     };
 
-    let mut passed_participates = 0usize;
+    let mut passed_participants = 0usize;
     let mut passed_foreigners = 0usize;
 
-    for participate in s {
-        let (is_passed, is_foreigner) = match participate {
-            'a' => (passed_participates < a + b, false),
-            'b' => (passed_participates < a + b && passed_foreigners < b, true),
+    for participant in s {
+        let (is_passed, is_foreigner) = match participant {
+            'a' => (passed_participants < a + b, false),
+            'b' => (passed_participants < a + b && passed_foreigners < b, true),
             _ => (false, false),
         };
 
         println!("{}", if is_passed { "Yes" } else { "No" });
 
         if is_passed {
-            passed_participates += 1;
+            passed_participants += 1;
             if is_foreigner {
                 passed_foreigners += 1;
             }
