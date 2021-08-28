@@ -41,7 +41,7 @@ fn solve() -> Option<usize> {
                 }
                 switched = true;
             }
-            a1 = if a1 == 1 { 0 } else { 1 };
+            a1 ^= 1;
         }
         ans += 1;
     }
